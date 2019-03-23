@@ -29,6 +29,8 @@
 		28CA181B2228129400DF0A63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28CA181A2228129400DF0A63 /* Assets.xcassets */; };
 		28CA181E2228129400DF0A63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28CA181C2228129400DF0A63 /* LaunchScreen.storyboard */; };
 		28E274A22236B0BC00241866 /* Alphabet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E274A12236B0BC00241866 /* Alphabet.swift */; };
+		B49973612246A544003A9D60 /* Alphabets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49973602246A544003A9D60 /* Alphabets.swift */; };
+		B49973652246A60B003A9D60 /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49973642246A60B003A9D60 /* UIKitExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		28CA181D2228129400DF0A63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		28CA181F2228129400DF0A63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28E274A12236B0BC00241866 /* Alphabet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alphabet.swift; sourceTree = "<group>"; };
+		B49973602246A544003A9D60 /* Alphabets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alphabets.swift; sourceTree = "<group>"; };
+		B49973642246A60B003A9D60 /* UIKitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,24 +85,11 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		28C2B08E222A9BD200C80ADF /* KanaPages */ = {
-			isa = PBXGroup;
-			children = (
-				28C2B088222975D500C80ADF /* PageViewController.swift */,
-				28C2B08A222998E700C80ADF /* HiraganaViewController.swift */,
-				28C2B08C222998F900C80ADF /* KatakanaViewController.swift */,
-				28C2B093222AA2B700C80ADF /* UIKanaNavigationController.swift */,
-				280955EF222BBB5300A94B3B /* NumbersViewController.swift */,
-			);
-			path = KanaPages;
-			sourceTree = "<group>";
-		};
 		28CA18042228129100DF0A63 = {
 			isa = PBXGroup;
 			children = (
 				28CA180F2228129100DF0A63 /* Kanafication */,
 				28CA180E2228129100DF0A63 /* Products */,
-				28C2B07D22282CDB00C80ADF /* Fonts */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,22 +104,93 @@
 		28CA180F2228129100DF0A63 /* Kanafication */ = {
 			isa = PBXGroup;
 			children = (
-				28C2B08E222A9BD200C80ADF /* KanaPages */,
 				28CA18102228129100DF0A63 /* AppDelegate.swift */,
-				28CA18122228129100DF0A63 /* ViewController.swift */,
-				28C2B0862229331A00C80ADF /* BarViewController.swift */,
-				28CA18142228129100DF0A63 /* Main.storyboard */,
+				B499735B2246A44F003A9D60 /* UI */,
+				B49973622246A5DD003A9D60 /* Extensions */,
+				B499735A2246A2DE003A9D60 /* Data */,
+				B49973592246A2C9003A9D60 /* Resources */,
+			);
+			path = Kanafication;
+			sourceTree = "<group>";
+		};
+		B49973592246A2C9003A9D60 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				28C2B07D22282CDB00C80ADF /* Fonts */,
 				28CA181A2228129400DF0A63 /* Assets.xcassets */,
 				28CA181C2228129400DF0A63 /* LaunchScreen.storyboard */,
 				28CA181F2228129400DF0A63 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		B499735A2246A2DE003A9D60 /* Data */ = {
+			isa = PBXGroup;
+			children = (
 				28E274A12236B0BC00241866 /* Alphabet.swift */,
+				B49973602246A544003A9D60 /* Alphabets.swift */,
+				B499735F2246A48D003A9D60 /* CoreData */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B499735B2246A44F003A9D60 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B499735E2246A478003A9D60 /* Storyboards */,
+				B499735D2246A469003A9D60 /* Controllers */,
+				B49973632246A5EA003A9D60 /* Views */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		B499735D2246A469003A9D60 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				28CA18122228129100DF0A63 /* ViewController.swift */,
+				28C2B0862229331A00C80ADF /* BarViewController.swift */,
 				28C2B08F222A9C0F00C80ADF /* TextViewController.swift */,
 				289AA7C9223523F200F50040 /* AfterTransformationViewController.swift */,
 				28B37C9B2243A12D007D7928 /* StarredTableViewController.swift */,
 				28C2B091222A9C1F00C80ADF /* StarredViewController.swift */,
+				28C2B088222975D500C80ADF /* PageViewController.swift */,
+				28C2B08A222998E700C80ADF /* HiraganaViewController.swift */,
+				28C2B08C222998F900C80ADF /* KatakanaViewController.swift */,
+				28C2B093222AA2B700C80ADF /* UIKanaNavigationController.swift */,
+				280955EF222BBB5300A94B3B /* NumbersViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B499735E2246A478003A9D60 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				28CA18142228129100DF0A63 /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		B499735F2246A48D003A9D60 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
 				28CA18172228129100DF0A63 /* Kanafication.xcdatamodeld */,
 			);
-			path = Kanafication;
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		B49973622246A5DD003A9D60 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B49973642246A60B003A9D60 /* UIKitExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B49973632246A5EA003A9D60 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,10 +275,12 @@
 				28C2B0872229331A00C80ADF /* BarViewController.swift in Sources */,
 				28B37C9C2243A12E007D7928 /* StarredTableViewController.swift in Sources */,
 				28C2B092222A9C1F00C80ADF /* StarredViewController.swift in Sources */,
+				B49973652246A60B003A9D60 /* UIKitExtensions.swift in Sources */,
 				28C2B08B222998E700C80ADF /* HiraganaViewController.swift in Sources */,
 				28C2B089222975D500C80ADF /* PageViewController.swift in Sources */,
 				28CA18192228129100DF0A63 /* Kanafication.xcdatamodeld in Sources */,
 				28C2B08D222998F900C80ADF /* KatakanaViewController.swift in Sources */,
+				B49973612246A544003A9D60 /* Alphabets.swift in Sources */,
 				28C2B094222AA2B700C80ADF /* UIKanaNavigationController.swift in Sources */,
 				28C2B090222A9C0F00C80ADF /* TextViewController.swift in Sources */,
 				289AA7CA223523F200F50040 /* AfterTransformationViewController.swift in Sources */,
